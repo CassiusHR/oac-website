@@ -6,10 +6,13 @@
     "animejs": "^3.0.1",
     "node-sass": "^4.12.0",
     "react": "^16.8.6",
+    "react-animated-slider": "^1.1.4",
     "react-dom": "^16.8.6",
+    "react-id-swiper": "^2.1.2",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1",
-    "react-slick": "^0.24.0"
+    "react-slick": "^0.24.0",
+    "swiper": "^4.5.0"
   },
   "scripts": {
     "start": "react-scripts start",
