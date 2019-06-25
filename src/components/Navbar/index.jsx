@@ -36,8 +36,6 @@ const Navbar = () => {
       <ul>
         <li className="nav-link">Inicio</li>
         <li className="nav-link">Quienes somos</li>
-        <li className="nav-link">Misión</li>
-        <li className="nav-link">Visión</li>
         <li className="nav-link">Cartelera</li>
         <li className="nav-link">Contacto</li>
       </ul>

@@ -2,6 +2,7 @@
   "name": "oac-website",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://www.carloshenriquez.net/oac",
   "dependencies": {
     "animejs": "^3.0.1",
     "node-sass": "^4.12.0",

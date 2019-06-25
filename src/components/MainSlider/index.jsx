@@ -1,34 +1,41 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import Swiper from 'react-id-swiper';
-import { Pagination, Navigation } from 'swiper/dist/js/swiper.esm'
+import { Pagination, Autoplay } from 'swiper/dist/js/swiper.esm'
 import './style.scss'
 
 const MainSlider = () => {
   const params = {
-    modules: [Pagination, Navigation],
+    modules: [Pagination, Autoplay],
+    autoplay: {
+      delay: 4500,
+      disableOnInteraction: false
+    },
     pagination: {
       el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
+      type: 'progressbar',
+      clickable: true,
+      dynamicBullets: true
     },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev'
-    },
-    spaceBetween: 30
+    grabCursor: true,
+    spaceBetween: 0
   }
 
   const content = [
     {
-      title:'Prueba1',
-      desc:'prueba1 prueba1',
-      background:'https://cdn.pixabay.com/photo/2017/02/13/21/57/lake-2063957_1280.jpg',
+      title:'Bienvenidos a OAC',
+      desc:'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin profes and 1.10.33',
+      background:'http://www.carloshenriquez.net/oac/assets/img/bg1.png'
     },
     {
       title:'Prueba2',
-      desc:'prueba2 prueba2',
-      background:'https://visme.co/blog/wp-content/uploads/2017/07/50-Beautiful-and-Minimalist-Presentation-Backgrounds-03.jpg',
+      desc:`There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators`,
+      background:'https://visme.co/blog/wp-content/uploads/2017/07/50-Beautiful-and-Minimalist-Presentation-Backgrounds-03.jpg'
     },
+    {
+      title:'Prueba3',
+      desc:'gsadhgsdhsdhwrlh we weg hmwe gmwelgmpweg we',
+      background:'https://visme.co/blog/wp-content/uploads/2017/07/50-Beautiful-and-Minimalist-Presentation-Backgrounds-03.jpg'
+    }
   ]
   const divBg = (src) => ({
     backgroundImage: `url(${src})`,
@@ -40,10 +47,10 @@ const MainSlider = () => {
     <div className="slider-wrap">
       <Swiper {...params}>
       {content.map((slide,index)=>
-            <div key={index} style={divBg(slide.background)}>
-              <h1>{slide.title}</h1>
-              <p>{slide.desc}</p>
-            </div>   
+          <div key={index} style={divBg(slide.background)}>
+            <h1>{slide.title}</h1>
+            <p>{slide.desc}</p>
+          </div>  
         )}
       </Swiper>
       
