@@ -3,6 +3,7 @@ import Swiper from 'react-id-swiper';
 import { Pagination, Autoplay } from 'swiper/dist/js/swiper.esm'
 import './style.scss'
 
+
 const MainSlider = () => {
   const params = {
     modules: [Pagination, Autoplay],

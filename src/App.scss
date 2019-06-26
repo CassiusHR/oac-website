@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap');
+*{
+  box-sizing: border-box;
+}
+body{
+  margin:0;
+  padding:0;
+  background: #F1F0F3;
+  overflow-x:hidden;
+}
+h1,h2,h3,h4,h5,h6,p,li,button{
+  font-family: 'Montserrat';
+}
+.App {
+  position:relative;
+  height:100%;
+}
+/* simple - enter transition 300ms, exit 150ms */
+.wrapper {
+  transition: opacity 0.5s ease,transform 0.5s ease;
+  position:absolute;
+  top:62px;
+  width:100%;
+}
+.fade-appear,
+.fade-enter {
+    opacity: 0;
+    z-index: 1;
+    transition: opacity 0.5s ease,transform 0.5s ease;
+    .wrapper {
+      opacity:0;
+      transform:translateY(100px);
+    }
+}
+.fade-appear-active,
+.fade-enter.fade-enter-active {
+    opacity: 1;
+    transition: all 500ms ease 500ms;
+    .wrapper {
+      transform:translateY(0%);
+      opacity:1;
+      transition: transform 500ms ease,opacity 500ms ease;
+    }
+}
+
+.fade-exit {
+    opacity: 1;
+    transition: opacity 500ms ease;
+    transform:translateY(0%);
+    .wrapper {
+      transition: opacity 0.5s ease,transform 0.5s ease;
+      transform:translateY(0%);
+    }
+}
+
+.fade-exit.fade-exit-active {
+    opacity: 0;
+    transition: opacity 500ms ease;
+    .wrapper {
+      transform:translateY(100px);
+      transition: transform 500ms ease;
+    }
+}
