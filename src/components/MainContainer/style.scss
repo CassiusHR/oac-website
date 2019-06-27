@@ -74,7 +74,7 @@
             }
           }
           &.right {
-            margin-right:-40px;
+            transform:translateX(40px);
             .background-block__overlay{
               transform: scaleX(-1);
               height:102%;
