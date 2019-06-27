@@ -1,10 +1,25 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Swiper from 'react-id-swiper';
 import { Pagination, Autoplay } from 'swiper/dist/js/swiper.esm'
 import './style.scss'
+import anime from 'animejs'
 
 
 const MainSlider = () => {
+
+  useEffect(()=>{
+    anime.timeline({
+      easing:'easeOutExpo',
+      duration:600,
+    })
+    .add({
+      delay:800,
+      targets:'.slider-wrap',
+      translateY:[-100,0],
+      opacity:[0,1],
+      duration:2500
+    })
+  },[])
   const params = {
     modules: [Pagination, Autoplay],
     autoplay: {

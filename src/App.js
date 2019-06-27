@@ -10,7 +10,7 @@ import QuienesSomos from './pages/quienes-somos'
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+      <BrowserRouter basename='/oac/'>
         <Navbar/>
         <Route render={({location}) => (
           <TransitionGroup>
