@@ -10,6 +10,7 @@ nav{
   padding: 0px 20px;
   position:relative;
   z-index:99;
+  min-height:62px;
   .logo-container{
     opacity:0;
     img{
@@ -88,6 +89,80 @@ nav{
         color:black;
       }
     }
+  }
+}
+.mobile-nav-icon-container {
+  height:40px;
+  width: 40px;
+  border-radius:50%;
+  display:none;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+  border:2px solid #000;
+  transition: all 0.3s 0.1s ease;
+  background: #F1F0F3;
+  -webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
+
+  &.active {
+      background: #fff;
+      border:2px solid rgb(155, 155, 155);
+  }
+
+  .mobile-nav-hamburger {
+      transform:translate(-1px,-1px);
+      -webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
+
+      svg {
+          width: 50px;
+          height: 36px;
+          cursor: pointer;
+          -webkit-transform: translate3d(0, 1px, 0);
+          -moz-transform: translate3d(0, 1px, 0);
+          -o-transform: translate3d(0, 1px, 0);
+          -ms-transform: translate3d(0, 1px, 0);
+          transform: translate3d(0, 1px, 0);
+        }
+      path {
+          fill: none;
+          -webkit-transition: stroke-dashoffset 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25), stroke-dasharray 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25);
+          -moz-transition: stroke-dashoffset 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25), stroke-dasharray 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25);
+          -o-transition: stroke-dashoffset 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25), stroke-dasharray 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25);
+          -ms-transition: stroke-dashoffset 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25), stroke-dasharray 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25);
+          transition: stroke-dashoffset 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25), stroke-dasharray 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25);
+          stroke-width: 40px;
+          stroke-linecap: round;
+          stroke: #000;
+          stroke-dashoffset: 0px;
+          transition:all 0.3s ease;
+          &#top,
+          &#bottom {
+              stroke-dasharray: 240px 950px;
+          }
+          &#middle {
+              stroke-dasharray: 240px 240px;
+            }
+        }
+        
+        &.cross path#top,
+        &.cross path#bottom {
+          stroke-dashoffset: -650px;
+          stroke-dashoffset: -650px;
+          stroke: rgb(155, 155, 155);
+        }
+        &.cross path#middle {
+          stroke-dashoffset: -115px;
+          stroke-dasharray: 1px 220px;
+          stroke: rgb(155, 155, 155);
+        }
+  }
+}
+@media (max-width:820px) {
+  nav ul {
+    display:none;
+  }
+  .mobile-nav-icon-container {
+    display:flex;
   }
 }
 @keyframes active-btn {
