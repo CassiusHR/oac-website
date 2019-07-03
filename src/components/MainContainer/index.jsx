@@ -13,7 +13,7 @@ const MainContainer = () => {
       duration:600
     })
     .add({
-      targets:'.main-container',
+      targets:'.index-container',
       opacity:[0,1],
       translateY:[100,-30],
       delay:800
@@ -27,7 +27,7 @@ const MainContainer = () => {
   },[])
   return(
     <div className="main-wrap">
-      <div className="main-container">
+      <div className="main-container index-container">
         <div className="content-block sep">
           <div className="left-content">
             <h1>Inicio</h1>

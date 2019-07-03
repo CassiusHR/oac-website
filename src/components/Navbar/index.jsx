@@ -58,9 +58,7 @@ const Navbar = () => {
   ]
   const handleClick = ()=>{
     isOpen === true ? setisOpen(false) : setisOpen(true)
-    console.log(windowSize)
   }
-  const windowSize = window.innerWidth
 
   return (
     <div>

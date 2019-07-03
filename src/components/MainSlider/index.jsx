@@ -21,6 +21,7 @@ const MainSlider = () => {
     })
   },[])
   const params = {
+    lazy:true,
     modules: [Pagination, Autoplay],
     autoplay: {
       delay: 4500,
